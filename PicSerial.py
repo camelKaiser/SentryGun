@@ -24,7 +24,7 @@ while (True):
     ret, frame = cap.read()
     #ret is a boolean, img is the image
 
-    cv2.imshow("camera",frame)
+    cv2.imshow("camera", frame)
     #leave the loop if the image cant be returned
 
     grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
