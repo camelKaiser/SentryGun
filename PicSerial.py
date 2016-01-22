@@ -15,7 +15,7 @@ time.sleep(5)
 ret,pic = cap.read()
 referenceFrame = cv2.cvtColor(pic, cv2.COLOR_BGR2GRAY)
 referenceFrame = cv2.GaussianBlur(referenceFrame, (21,21),0)
-counter = 1
+fire = False
 height,width = referenceFrame.shape[:2]
 
 while (True):
@@ -33,7 +33,7 @@ while (True):
     blur = cv2.GaussianBlur(grey, (21,21),0)
     cv2.imshow("blur",blur)
     #greyscale and gaussian blurs each frame
-    counter+=1
+
 
 
     delta =cv2.absdiff(referenceFrame,blur)
@@ -54,7 +54,7 @@ while (True):
         if cv2.contourArea(cnt) < 10000:
             ser.write(chr(0))
             continue
-
+        fire=True
         x,y,w,h = cv2.boundingRect(cnt)
         print "x is {} y is {} w is {} h is {}, center will be at {},{}".format(x,y,w,h,x+(w/2),y+(h/2))
 
