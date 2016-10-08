@@ -1,0 +1,6 @@
+{
+  "name": "Sentrygun",
+  "tagline": "SE Senior project. Autonmous sentry gun. ",
+  "body": "# SentryGun\r\nRequires Python 2.7, OpenCV 3.0, and pyserial.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
